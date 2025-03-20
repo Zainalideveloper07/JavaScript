@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissors</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+    const randomNumber=Math.random();
+    let computerMove=''
+    if(randomNumber>=0 && randomNumber < 1/3){
+        computerMove='Rock';
+    } else if(randomNumber>=1/3 && randomNumber< 2/3 ){
+             computerMove='paper';
+    } else if(randomNumber>=2/3 && randomNumber< 1){
+         computerMove='scissors';
+    }
+        let result='';
+    if (computerMove==='Rock') {
+        result='Tie.'} else if(computerMove==='paper'){
+            result='you lose';
+                   } else if (computerMove==='scissors'){
+                    result='You Win';
+                   }
+         alert(`you picked the rock. Computer picked ${computerMove}. ${result}`)           
+                   
+    ">Rock</button>
+
+
+    <button
+    onclick="
+    const randomNumber=Math.random();
+    let computerMove=''
+    if(randomNumber>=0 && randomNumber < 1/3){
+        computerMove='Rock';
+    } else if(randomNumber>=1/3 && randomNumber< 2/3 ){
+             computerMove='paper';
+    } else if(randomNumber>=2/3 && randomNumber< 1){
+         computerMove='scissors';
+    }
+        let result='';
+    if (computerMove==='Rock') {
+        result='you win.'} else if(computerMove==='paper'){
+            result='Tie.';
+                   } else if (computerMove==='scissors'){
+                    result='You lose';
+                   }
+         alert(`you picked the paper. Computer picked ${computerMove}. ${result}`)  ">Paper</button>
+    <button 
+    onclick="
+    const randomNumber=Math.random();
+    let computerMove=''
+    if(randomNumber>=0 && randomNumber < 1/3){
+        computerMove='Rock';
+    } else if(randomNumber>=1/3 && randomNumber< 2/3 ){
+             computerMove='paper';
+    } else if(randomNumber>=2/3 && randomNumber< 1){
+         computerMove='scissors';
+    }
+        let result='';
+    if (computerMove==='Rock') {
+        result='you lose.'} else if(computerMove==='paper'){
+            result='you win.';
+                   } else if (computerMove==='scissors'){
+                    result='Tie';
+                   }
+         alert(`you picked the Scissor. Computer picked ${computerMove}. ${result}`)  "
+    >Scissore</button>
+
+
+    <script>
+const meassage = false && 'hello;
+console.log(message);
+    </script>
+</body>
+
+</html>
