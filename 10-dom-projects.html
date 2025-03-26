@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Project</title>
+    <style>
+          body{
+            font-family:Arial;
+        }
+             .Subscribe-button{
+                border: none;
+                background-color: black;
+                color: white;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                font-weight: bold;
+                border-radius:50px ;
+                cursor: pointer;
+        }
+
+        .is-subscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+
+        .cost-input{
+            font-size: 15px;
+            padding: 10PX;
+        }
+        .calculated-button{
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 12px 15px ;
+        cursor: pointer;       }
+      
+    </style>
+
+</head>
+<body>
+    <p>YouTube Subsribe Button</p>
+    <Button onclick="Subscribe()" class="js-subscribe-button Subscribe-button">Subscribe</Button>
+
+
+
+        <p>Amzon shipping Calculator</p>
+        <input placeholder="Cost of oder" class="js-cost-input cost-input" onkeydown="
+        handleCostKeydowm()">
+            <button onclick="caculateTotal()" class="calculated-button">Calculator</button>
+         <p class="js-toatl-cost"></p>   
+
+
+
+    <script>
+            
+
+
+            console.log(String(25));
+        function handleCostKeydowm(){
+            console.log(event.key)
+        if(event.key==='Enter'){
+            caculateTotal();
+        }
+
+        }
+
+        function caculateTotal(){
+            const inputElement= document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            if(cost<40){
+                cost= cost+10;
+            }
+        document.querySelector('.js-toatl-cost').innerHTML=`$${cost}`;
+        
+        }
+
+
+
+
+
+            function Subscribe(){
+                const buttonElement =document.querySelector('.js-subscribe-button');
+    if(buttonElement.innerText==='Subscribe'){
+        buttonElement.innerText='Subscribed';
+        buttonElement.classList.add('is-subscribed');
+    } else{
+        buttonElement.innerText='Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+    }
+
+
+            }
+    </script>
+</body>
+</html>
